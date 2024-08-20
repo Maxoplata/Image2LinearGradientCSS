@@ -15,17 +15,17 @@ const fs = require('node:fs/promises');
 const Jimp = require('jimp');
 
 (async () => {
-	if (process.argv.length != 4) {
-		throw new Error('Invalid argument count');
-	}
+    if (process.argv.length != 4) {
+        throw new Error('Invalid argument count');
+    }
 
     // load our command line params
-	const inputFile = process.argv[2];
-	const outputFile = process.argv[3];
+    const inputFile = process.argv[2];
+    const outputFile = process.argv[3];
 
-	try {
-		// load input file
-		const image = await Jimp.read(inputFile);
+    try {
+        // load input file
+        const image = await Jimp.read(inputFile);
 
         // our output css
         let output = '';
@@ -76,14 +76,14 @@ const Jimp = require('jimp');
 
                 // add the block to the output
                 output += (output !== '' ? ', ' : '') + `linear-gradient(#${color.toString(16).substring(0, 6).toUpperCase()} 100%, white 100%) no-repeat scroll ${x}px ${y}px / ${blockWidth}px ${blockHeight}px`;
-			}
-		}
+            }
+        }
 
-		// write output to file
-		await fs.writeFile(outputFile, `background: ${output};`);
+        // write output to file
+        await fs.writeFile(outputFile, `background: ${output};`);
 
-		console.log(`background CSS for '${inputFile}' has been written to '${outputFile}'`);
-	} catch (error) {
-		throw new Error(`Failed to create background CSS output: ${error}`);
-	}
+        console.log(`background CSS for '${inputFile}' has been written to '${outputFile}'`);
+    } catch (error) {
+        throw new Error(`Failed to create background CSS output: ${error}`);
+    }
 })();
