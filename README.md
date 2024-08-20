@@ -11,4 +11,4 @@ Yes. Consecutive horizontal or vertical pixels of the same color could be a sing
 Still, no.
 
 ## Example?
-<a href="example/example.html">Here is an example of what gets output</a>. The example is based on <a href="example/example.jpg">this 72px x 72px image</a>.
+<a href="example/example.html">Here is an implementation of what gets output</a>. The example is based on <a href="example/example.jpg">this 72px x 72px image</a>. The actual output of the script is a file with the entire `background-image: ...;` CSS string.
