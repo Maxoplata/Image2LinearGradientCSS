@@ -82,7 +82,7 @@ const Jimp = require('jimp');
 		// write output to file
 		await fs.writeFile(outputFile, `background: ${output};`);
 
-		console.log(`background CSS for '${inputFile}'' has been written to '${outputFile}'`);
+		console.log(`background CSS for '${inputFile}' has been written to '${outputFile}'`);
 	} catch (error) {
 		throw new Error(`Failed to create background CSS output: ${error}`);
 	}
