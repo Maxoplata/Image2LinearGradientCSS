@@ -2,13 +2,7 @@
 A proof-of-concept to convert an image to linear-gradient CSS.
 
 ## Is this practical?
-No. a 72px x 72px image is ~400KB of CSS.
-
-## Could this be optimized?
-Yes. Consecutive horizontal or vertical pixels of the same color could be a single linear gradient instead of multiple. But I don't really want to spend the time doing that because...
-
-## Would this be practical if it were optimized?
-Still, no.
+No. a 72px x 72px image is ~350-400KB of CSS.
 
 ## Example?
-<a href="example/example.html">Here is an implementation of what gets output</a>. The example is based on <a href="example/example.jpg">this 72px x 72px image</a>. The actual output of the script is a file with the entire `background-image: ...;` CSS string.
+<a href="example/example.html">Here is an implementation of what gets output</a>. The example is based on <a href="example/example.jpg">this 72px x 72px image</a>. The actual output of the script is a file with the entire `background: ...;` CSS string.
